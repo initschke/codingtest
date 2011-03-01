@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){
+	$(".increaseFont").click(function(){
+		var currentFontSize = $('.story').css('font-size');
+		var currentFontSizeNum = parseFloat(currentFontSize, 10);
+		if (currentFontSizeNum < 15){
+		var newFontSize = parseInt(currentFontSizeNum*1.2);
+		} else {
+		var newFontSize = parseInt(currentFontSizeNum*.875);
+		}
+		$(this).text($(this).text() == 'Smaller type' ? 'Larger type' : 'Smaller type');
+		var src = ($('#plusMinus').attr('src') === 'images/plus.jpg')
+                    ? 'images/minus.jpg' 
+                    : 'images/plus.jpg';
+      		$('#plusMinus').attr('src', src);
+		$('.story').css('font-size', newFontSize); 
+		return false;
+	});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="gradient">
+<div id="wrap">
+<div id="header">
+<a href="#">Home</a> > <a href="#">Sports</a> > <a href="#">Longhorns</a>
+<p style="font-size:18px; font-family:Georgia;">Texas puts perfect mark on line at Kansas State</p> 
+</div>
+<div id="main">
+<p>By <a href="#"><b>Mark Rosner</b></a></p>
+<p style="font-size:12px;">AMERICAN-STATESMAN STAFF</p>
+<p style="font-size:12px; color:#666666">Updated: 11:17 p.m. Sunday, Jan. 17, 2010</p>
+<p style="font-size:12px; color:#666666">Published: 6:57 p.m. Sunday, Jan.17, 2010</p>
+<p style="border-bottom-style: dotted; border-bottom-color:#202020; border-bottom-width:1px"></p>
+
+<p style="font-size:12px;"><img src="images/bubble.jpg"> Post a Comment | <img src="images/mail.jpg"> E-mail | <img src="images/printer.jpg"> Print | <img src="images/nodes.jpg"> Share | <img id="plusMinus" src="images/plus.jpg" /> <a href="#" class="increaseFont">Larger type</a></p>
+<div class="story">
+<p>
+MANHATTAN, Kan. - The Longhorns, three games into their defense of the No. 1 ranking, come to a place where the opponent is formidable, the crowd is raucous, and the referees might just wear out their whistles.
+
+They come to face No. 13 Kansas State, an in-your-face team that reflects the personality of its coach, Frank Martin. The Wildcats spend much of their games fouling and shooting free throws.
+
+All 12,528 tickets have been sold, and coach Rick Barnes hopes the Longhorns can summon the fortitude Texas A&M showed in the packed Erwin Center on Saturday during a 72-67 loss to the Longhorns in overtime.
+
+"It's gonna be flipped Monday," Barnes said. "We're not gonna have the house. I hope we go in with the same intensity A&M brought."
+
+Kansas State has 13 consecutive victories at home, its longest streak in Manhattan since winning 20 straight in 1981-82.
+
+The Longhorns and Wildcats would not be called rivals, but you couldn't tell by their games in recent seasons.
+
+Barnes is 8-4 against Kansas State. The Longhorns have won four of the last six, but five of those games were decided by four points or fewer. Texas has won the last two in Manhattan. K-State has a two-game winning steak in Austin.
+</p>
+</div>
+</div>
+<div id="sidebar">
+<img src="images/basketball.jpg">
+<p>Laura Skelding/AMERICAN-STATESMAN</p>
+<a href="#"><img src="images/plus.jpg"> ENLARGE PHOTO</a>
+<p style="color:#202020">Texas senior forward Damion James and freshman guard
+Avery Bradley will be on alert against Kansas State just as they were against 
+Texas A&M's David Loubeau, center, on Saturday.</p>
+</div>
+</div>
+</div>
+</body>
+</html>
